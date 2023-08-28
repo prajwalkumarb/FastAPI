@@ -1,0 +1,83 @@
+D:\Fastapi>py -m venv env
+
+D:\Fastapi>cd env
+
+D:\Fastapi\env>cd Scripts
+
+D:\Fastapi\env\Scripts>activate
+
+(env) D:\Fastapi\env\Scripts>cd ..
+
+(env) D:\Fastapi\env>cd ..
+
+(env) D:\Fastapi>mkdir demoapp
+
+(env) D:\Fastapi>cd demoapp
+
+(env) D:\Fastapi\demoapp>pip install fastapi
+Collecting fastapi
+
+(env) D:\Fastapi\demoapp>pip install uvicorn
+Collecting uvicorn
+========================================================
+
+#to execute the file
+----------------------
+uvicorn filename:app --host 0.0.0.0 --port 8080
+                or
+uvicorn main:app --reload 
+========================================================
+# Process of execution
+-----------
+D:\Fastapi\demoapp>d:/Fastapi/env/Scripts/activate.bat
+
+(env) D:\Fastapi\demoapp>cd C:\Users\Praju\OneDrive\Desktop\FastAPI-The-Complete-Course\FastAPI-The-Complete-Course\Project 1 //path of the file 
+
+(env) D:\Fastapi\demoapp>c:
+
+(env) C:\Users\Praju\OneDrive\Desktop\FastAPI-The-Complete-Course\FastAPI-The-Complete-Course\Project 1>dir                           
+ Volume in drive C has no label.
+ Volume Serial Number is 680A-691B
+
+ Directory of C:\Users\Praju\OneDrive\Desktop\FastAPI-The-Complete-Course\FastAPI-The-Complete-Course\Project 1
+
+23-08-2023  17:35    <DIR>          .
+23-08-2023  17:35    <DIR>          ..
+23-08-2023  17:35             2,286 books.py
+               1 File(s)          2,286 bytes
+               2 Dir(s)  37,422,260,224 bytes free
+
+(env) C:\Users\Praju\OneDrive\Desktop\FastAPI-The-Complete-Course\FastAPI-The-Complete-Course\Project 1>python main.py       
+C:\Users\Praju\AppData\Local\Programs\Python\Python311\python.exe: can't open file 'C:\\Users\\Praju\\OneDrive\\Desktop\\FastAPI-The-Complete-Course\\FastAPI-The-Complete-Course\\Project 1\\main.py': [Errno 2] No such file or directory
+
+(env) C:\Users\Praju\OneDrive\Desktop\FastAPI-The-Complete-Course\FastAPI-The-Complete-Course\Project 1>python books.py
+
+(env) C:\Users\Praju\OneDrive\Desktop\FastAPI-The-Complete-Course\FastAPI-The-Complete-Course\Project 1>uvicorn books:app --host 0.0.0.0 --port 8080
+INFO:     Started server process [11692]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)
+INFO:     127.0.0.1:59670 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:59670 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:59671 - "GET /book HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:59673 - "GET /books HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [11692]
+
+(env) C:\Users\Praju\OneDrive\Desktop\FastAPI-The-Complete-Course\FastAPI-The-Complete-Course\Project 1>uvicorn books:app --host 0.0.0
+.0 --port 8080
+(env) C:\Users\Praju\OneDrive\Desktop\FastAPI-The-Complete-Course\FastAPI-The-Complete-Course\Project 1>cd ..
+
+(env) C:\Users\Praju\OneDrive\Desktop\FastAPI-The-Complete-Course\FastAPI-The-Complete-Course>cd Project 2
+
+(env) C:\Users\Praju\OneDrive\Desktop\FastAPI-The-Complete-Course\FastAPI-The-Complete-Course\Project 2>uvicorn books2:app --host 0.0.0.0 --port 8080 
+D:\Fastapi\env\Lib\site-packages\pydantic\_internal\_config.py:269: UserWarning: Valid config keys have changed in V2:
+* 'schema_extra' has been renamed to 'json_schema_extra'
+  warnings.warn(message, UserWarning)
+INFO:     Started server process [18728]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)
+INFO:     127.0.0.1:59742 - "GET /books HTTP/1.1" 200 OK
